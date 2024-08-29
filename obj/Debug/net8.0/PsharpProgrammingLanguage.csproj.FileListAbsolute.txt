@@ -1,0 +1,5 @@
+/home/atticus/Documents/GitHub/PsharpProgrammingLanguage/PsharpProgrammingLanguage/obj/Debug/net8.0/PsharpProgrammingLanguage.GeneratedMSBuildEditorConfig.editorconfig
+/home/atticus/Documents/GitHub/PsharpProgrammingLanguage/PsharpProgrammingLanguage/obj/Debug/net8.0/PsharpProgrammingLanguage.AssemblyInfoInputs.cache
+/home/atticus/Documents/GitHub/PsharpProgrammingLanguage/PsharpProgrammingLanguage/obj/Debug/net8.0/PsharpProgrammingLanguage.AssemblyInfo.cs
+/home/atticus/Documents/GitHub/PsharpProgrammingLanguage/PsharpProgrammingLanguage/obj/Debug/net8.0/PsharpProgrammingLanguage.csproj.CoreCompileInputs.cache
+/home/atticus/Documents/GitHub/PsharpProgrammingLanguage/PsharpProgrammingLanguage/obj/Debug/net8.0/PsharpProgrammingLanguage.sourcelink.json
