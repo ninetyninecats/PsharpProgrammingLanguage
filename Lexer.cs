@@ -1,6 +1,12 @@
 public class Lexer {
     static Queue<string> src;
     static List<Token> tokens;
+    static Dictionary<string, TokenType> keywords = new Dictionary<string, TokenType> {
+        {"var", TokenType.VAR_KEYWORD},
+        {"int", TokenType.INT_KEYWORD},
+        {"bool", TokenType.BOOL_KEYWORD},
+        {"char", TokenType.CHAR_KEYWORD}
+    };
 
     static List<Token> Tokenize(string source) {
         tokens = new List<Token>();
@@ -34,9 +40,14 @@ public class Lexer {
                     string ident = "";
                     while (src.Count > 0 && IsAlpha(src.Peek())) {
                         ident += src.Dequeue();
-                    }
-                    tokens.Add(new Token(ident, TokenType.IDENTIFIER));
-                }
+                    }                        
+                    TokenType keyword;
+                    if (!keywords.TryGetValue(ident, out keyword)) {
+                        tokens.Add(new Token(ident, TokenType.IDENTIFIER));
+                    } else tokens.Add(new Token(ident, keyword));
+                } else if (IsWhitespace(src.Peek())) {
+                    src.Dequeue();
+                } else throw new Exception();
                 break;
             }
         }
@@ -52,6 +63,9 @@ public class Lexer {
         char c = str.ToCharArray()[0];
         int[] bounds = ["0".ToCharArray()[0], "9".ToCharArray()[0]];
         return c >= bounds[0] && c <= bounds[1];
+    }
+    static bool IsWhitespace(string str) {
+        return str == " " || str == "\n" || str == "\t";
     }
 }
 
@@ -74,5 +88,8 @@ public enum TokenType {
 
     BINARY_OPERATOR,
 
-    VAR
+    VAR_KEYWORD,
+    INT_KEYWORD,
+    BOOL_KEYWORD,
+    CHAR_KEYWORD,
 }
