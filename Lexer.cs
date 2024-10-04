@@ -1,6 +1,6 @@
 public class Lexer {
     static Queue<string> src;
-    static List<Token> tokens;
+    static Queue<Token> tokens;
     static Dictionary<string, TokenType> keywords = new Dictionary<string, TokenType> {
         {"var", TokenType.VAR_KEYWORD},
         {"int", TokenType.INT_KEYWORD},
@@ -8,26 +8,26 @@ public class Lexer {
         {"char", TokenType.CHAR_KEYWORD}
     };
 
-    static List<Token> Tokenize(string source) {
-        tokens = new List<Token>();
+    public static Queue<Token> Tokenize(string source) {
+        tokens = new Queue<Token>();
         foreach(string character in source.Split("")) src.Append(character);
 
         while (src.Count > 0) {
             switch (src.Peek()) {
             case "(":
-                tokens.Add(new Token(src.Dequeue(), TokenType.OPEN_PAREN));
+                tokens.Append(new Token(src.Dequeue(), TokenType.OPEN_PAREN));
                 break;
             case ")":
-                tokens.Add(new Token(src.Dequeue(), TokenType.OPEN_PAREN));
+                tokens.Append(new Token(src.Dequeue(), TokenType.OPEN_PAREN));
                 break;
             case "+":
             case "-":
             case "*":
             case "%":
-                tokens.Add(new Token(src.Dequeue(), TokenType.BINARY_OPERATOR));
+                tokens.Append(new Token(src.Dequeue(), TokenType.BINARY_OPERATOR));
                 break;
             case "=":
-                tokens.Add(new Token(src.Dequeue(), TokenType.EQUALS));
+                tokens.Append(new Token(src.Dequeue(), TokenType.EQUALS));
                 break;
             default:
                 if (IsInteger(src.Peek())) {
@@ -35,7 +35,7 @@ public class Lexer {
                     while (src.Count > 0 && IsInteger(src.Peek())) {
                         num += src.Dequeue();
                     }
-                    tokens.Add(new Token(num, TokenType.NUMBER));
+                    tokens.Append(new Token(num, TokenType.NUMBER));
                 } else if (IsAlpha(src.Peek())) {
                     string ident = "";
                     while (src.Count > 0 && IsAlpha(src.Peek())) {
@@ -43,8 +43,8 @@ public class Lexer {
                     }                        
                     TokenType keyword;
                     if (!keywords.TryGetValue(ident, out keyword)) {
-                        tokens.Add(new Token(ident, TokenType.IDENTIFIER));
-                    } else tokens.Add(new Token(ident, keyword));
+                        tokens.Append(new Token(ident, TokenType.IDENTIFIER));
+                    } else tokens.Append(new Token(ident, keyword));
                 } else if (IsWhitespace(src.Peek())) {
                     src.Dequeue();
                 } else throw new Exception();
@@ -52,6 +52,7 @@ public class Lexer {
             }
         }
 
+        tokens.Append(new Token("EndOfFile", TokenType.EOF));
         return tokens;
     }
     
@@ -70,8 +71,8 @@ public class Lexer {
 }
 
 public class Token {
-    string value;
-    TokenType type;
+    public string value;
+    public TokenType type;
     public Token(string value, TokenType type) {
         this.value = value;
         this.type = type;
@@ -92,4 +93,6 @@ public enum TokenType {
     INT_KEYWORD,
     BOOL_KEYWORD,
     CHAR_KEYWORD,
+
+    EOF,
 }
