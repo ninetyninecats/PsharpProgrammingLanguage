@@ -6,9 +6,18 @@ public class Node {
 
 }
 public class ProgramNode : Node {
-    public StmtNode[] stmts;
-    public ProgramNode(StmtNode[] stmts) {
+    public List<StmtNode> stmts;
+    public ProgramNode(List<StmtNode> stmts) {
         this.stmts = stmts;
+    }
+    public override string ToString()
+    {
+        string strings = "[Type: Program, Stmts: ";
+        for (int ii = 0; ii < stmts.Count; ii += 1) {
+            strings = strings + stmts[ii].ToString() + ",";
+        }
+        
+        return strings;
     }
 }
 public class StmtNode : Node {
@@ -26,16 +35,26 @@ public class BinOpNode : ExprNode {
         this.lhs = lhs;
         this.op = op;
     }
+    public override string ToString() {
+        return lhs.ToString() + op + rhs.ToString();
+    }
 }
 public class IdentNode : ExprNode {
     public string name;
     public IdentNode(string name) {
         this.name = name;
     }
+    public override string ToString()
+    {
+        return "[Type: Ident, Value: " + name + "]";
+    }
 }
 public class NumericLiteralNode : ExprNode {
     public float value;
     public NumericLiteralNode(float value) {
         this.value = value;
+    }
+    public override string ToString() {
+        return "[Type: Number, Value: " + value.ToString() + "]";
     }
 }

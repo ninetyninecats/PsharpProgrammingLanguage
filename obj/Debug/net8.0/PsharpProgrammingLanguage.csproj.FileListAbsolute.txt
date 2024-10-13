@@ -3,3 +3,13 @@
 /home/atticus/Documents/GitHub/PsharpProgrammingLanguage/PsharpProgrammingLanguage/obj/Debug/net8.0/PsharpProgrammingLanguage.AssemblyInfo.cs
 /home/atticus/Documents/GitHub/PsharpProgrammingLanguage/PsharpProgrammingLanguage/obj/Debug/net8.0/PsharpProgrammingLanguage.csproj.CoreCompileInputs.cache
 /home/atticus/Documents/GitHub/PsharpProgrammingLanguage/PsharpProgrammingLanguage/obj/Debug/net8.0/PsharpProgrammingLanguage.sourcelink.json
+/home/atticus/Documents/GitHub/PsharpProgrammingLanguage/PsharpProgrammingLanguage/bin/Debug/net8.0/PsharpProgrammingLanguage
+/home/atticus/Documents/GitHub/PsharpProgrammingLanguage/PsharpProgrammingLanguage/bin/Debug/net8.0/PsharpProgrammingLanguage.deps.json
+/home/atticus/Documents/GitHub/PsharpProgrammingLanguage/PsharpProgrammingLanguage/bin/Debug/net8.0/PsharpProgrammingLanguage.runtimeconfig.json
+/home/atticus/Documents/GitHub/PsharpProgrammingLanguage/PsharpProgrammingLanguage/bin/Debug/net8.0/PsharpProgrammingLanguage.dll
+/home/atticus/Documents/GitHub/PsharpProgrammingLanguage/PsharpProgrammingLanguage/bin/Debug/net8.0/PsharpProgrammingLanguage.pdb
+/home/atticus/Documents/GitHub/PsharpProgrammingLanguage/PsharpProgrammingLanguage/obj/Debug/net8.0/PsharpProgrammingLanguage.dll
+/home/atticus/Documents/GitHub/PsharpProgrammingLanguage/PsharpProgrammingLanguage/obj/Debug/net8.0/refint/PsharpProgrammingLanguage.dll
+/home/atticus/Documents/GitHub/PsharpProgrammingLanguage/PsharpProgrammingLanguage/obj/Debug/net8.0/PsharpProgrammingLanguage.pdb
+/home/atticus/Documents/GitHub/PsharpProgrammingLanguage/PsharpProgrammingLanguage/obj/Debug/net8.0/PsharpProgrammingLanguage.genruntimeconfig.cache
+/home/atticus/Documents/GitHub/PsharpProgrammingLanguage/PsharpProgrammingLanguage/obj/Debug/net8.0/ref/PsharpProgrammingLanguage.dll

@@ -1,4 +1,4 @@
-P# version 0.2
+P# version 0.3
 
 
 P# is a programming language designed to get the best of both worlds between the simple syntax of python and the speed and optimizing compiler of C#

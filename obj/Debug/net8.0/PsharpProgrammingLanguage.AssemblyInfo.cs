@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PsharpProgrammingLanguage")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+902bbfa20596ff27f777e58988b67f7cd3304e2b")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f85273415ff702b66d3230e789062afb4d0a7bd1")]
 [assembly: System.Reflection.AssemblyProductAttribute("PsharpProgrammingLanguage")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PsharpProgrammingLanguage")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

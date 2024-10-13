@@ -1,14 +1,12 @@
-using System.Security.Cryptography;
-
 public class Parser {
-    private Queue<Token> tokens = [];
+    private Queue<Token> tokens = new Queue<Token>();
 
     public ProgramNode ProduceAST(string source) {
         tokens = Lexer.Tokenize(source);
         ProgramNode program = new ProgramNode([]);
-
+        Console.WriteLine(tokens.Count);
         while(tokens.Peek().type != TokenType.EOF) {
-            program.stmts.Append(ParseStmt());
+            program.stmts = new List<StmtNode>(program.stmts.Append(ParseStmt()));
         }
 
         return program;
@@ -27,6 +25,7 @@ public class Parser {
         case TokenType.NUMBER:
             return new NumericLiteralNode(float.Parse(tokens.Dequeue().value));
         case TokenType.IDENTIFIER:
+            Console.WriteLine("Testing");
             return new IdentNode(tokens.Dequeue().value);
         default:
             Console.WriteLine("Unexpected token found during parsing!");
