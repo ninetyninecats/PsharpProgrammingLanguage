@@ -25,6 +25,16 @@ public class Lexer {
             case '%':
                 tokens.Enqueue(new Token(src.Dequeue().ToString(), TokenType.BINARY_OPERATOR));
                 break;
+            case '/':
+                src.Dequeue();
+                string comment = "";
+                if (src.Peek() == '/') {
+                    while (src.Peek() != '\n') {
+                        comment += src.Dequeue();
+                    }
+                    tokens.Enqueue(new Token(comment, TokenType.LINE_COMMENT));
+                } else tokens.Enqueue(new Token("/", TokenType.BINARY_OPERATOR));
+                break;
             case '=':
                 tokens.Enqueue(new Token(src.Dequeue().ToString(), TokenType.EQUALS));
                 break;
@@ -44,7 +54,6 @@ public class Lexer {
                     TokenType keyword;
                     if (!keywords.TryGetValue(ident, out keyword)) {
                         tokens.Enqueue(new Token(ident, TokenType.IDENTIFIER));                        
-                        Console.WriteLine(ident);
 
                     } else {
                         tokens.Enqueue(new Token(ident, keyword));
@@ -85,6 +94,8 @@ public enum TokenType {
     INT_KEYWORD,
     BOOL_KEYWORD,
     CHAR_KEYWORD,
+
+    LINE_COMMENT,
 
     EOF,
 }

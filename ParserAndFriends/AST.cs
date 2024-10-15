@@ -14,10 +14,10 @@ public class ProgramNode : Node {
     {
         string strings = "[Type: Program, Stmts: ";
         for (int ii = 0; ii < stmts.Count; ii += 1) {
-            strings = strings + stmts[ii].ToString() + ",";
+            strings = strings + stmts[ii].ToString() + ",\n";
         }
         
-        return strings;
+        return strings + "]";
     }
 }
 public class StmtNode : Node {
@@ -36,7 +36,7 @@ public class BinOpNode : ExprNode {
         this.op = op;
     }
     public override string ToString() {
-        return lhs.ToString() + op + rhs.ToString();
+        return "[Type: BinOp,\nLHS: " + lhs.ToString() + ",\nRHS: " + rhs.ToString() +",\nOperator: " + op + "\n]";
     }
 }
 public class IdentNode : ExprNode {
@@ -57,4 +57,10 @@ public class NumericLiteralNode : ExprNode {
     public override string ToString() {
         return "[Type: Number, Value: " + value.ToString() + "]";
     }
+}
+public class StringLiteralNode : ExprNode {
+
+}
+public class CommentNode : Node {
+
 }
