@@ -26,7 +26,7 @@ public class Interpreter {
     static RuntimeValue EvaluateBinaryExpr(BinOpNode binop) {
         RuntimeValue lhs = Evaluate(binop.lhs);
         RuntimeValue rhs = Evaluate(binop.rhs);
-        if (lhs.GetType().Name == "NumericLiteralNode" && rhs.GetType().Name == "NumericLiteralNode") {
+        if (binop.lhs.GetType().Name == "NumericLiteralNode" && binop.rhs.GetType().Name == "NumericLiteralNode") {
             return EvaluateNumericBinaryExpr((lhs as NumberValue)!, (rhs as NumberValue)!, binop.op);
         }
         return new NullValue("null");

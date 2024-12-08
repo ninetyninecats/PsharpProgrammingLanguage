@@ -15,4 +15,7 @@ public class NumberValue : RuntimeValue {
     public NumberValue(float value) {
         this.value = value;
     }
+    public override string ToString() {
+        return "[Type: Number, Value: " + value + " ]";
+    }
 }

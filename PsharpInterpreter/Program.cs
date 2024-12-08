@@ -22,8 +22,8 @@ public class Program {
             }
 
             ProgramNode program = parser.ProduceAST(input);
-            Console.WriteLine(program.ToString());
             var result = Interpreter.Evaluate(program);
+            Console.WriteLine(result.ToString());
         }
     }
 
