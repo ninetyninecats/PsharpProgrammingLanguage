@@ -4,7 +4,7 @@ public class Parser {
     public ProgramNode ProduceAST(string source) {
         tokens = Lexer.Tokenize(source);
         ProgramNode program = new ProgramNode([]);
-        while(tokens.Peek().type != TokenType.EOF) {
+        while(tokens.Peek().type != TokenType.END_OF_FILE) {
             program.stmts = new List<StmtNode>(program.stmts.Append(ParseStmt()));
         }
 

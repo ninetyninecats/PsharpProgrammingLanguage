@@ -29,6 +29,7 @@ public class Interpreter {
         if (lhs.GetType().Name == "NumericLiteralNode" && rhs.GetType().Name == "NumericLiteralNode") {
             return EvaluateNumericBinaryExpr((lhs as NumberValue)!, (rhs as NumberValue)!, binop.op);
         }
+        return new NullValue("null");
     }
     static RuntimeValue EvaluateNumericBinaryExpr(NumberValue lhs, NumberValue rhs, string op) {
         float result = 0;
