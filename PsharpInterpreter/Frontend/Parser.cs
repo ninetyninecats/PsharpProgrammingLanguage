@@ -1,5 +1,3 @@
-using System.Security.Cryptography.X509Certificates;
-
 public class Parser {
     public static Queue<Token> tokens = new Queue<Token>();
 
@@ -214,6 +212,7 @@ public class Parser {
                 throw new ExpectedSemicolonError(
                     "Semicolon must follow expression statement", lineNo,
                     token);
+            tokens.Dequeue();
             if (expr is not LHS)
                 throw new Exception(
                     "Cannot assign value to expression of type" +
@@ -321,9 +320,11 @@ public class Parser {
             tokens.Dequeue();
             return new NullLiteralNode();
         case TokenType.NUMBER:
+            Console.WriteLine("Parsed number");
             return new IntegerLiteralNode(ulong.Parse(tokens.Dequeue().value),
                                           false);
         case TokenType.IDENTIFIER:
+            Console.WriteLine("Parsed Ident");
             return new IdentNode(tokens.Dequeue().value);
         case TokenType.OPEN_PAREN:
             tokens.Dequeue();
