@@ -10,12 +10,18 @@ public class NullValue : RuntimeValue {
 }
 
 public class NumberValue : RuntimeValue {
-    public float value;
+    public double value;
 
-    public NumberValue(float value) {
+    public NumberValue(double value) {
         this.value = value;
     }
     public override string ToString() {
         return "[Type: Number, Value: " + value + " ]";
+    }
+}
+public class BooleanValue : RuntimeValue {
+    public bool value;
+    public BooleanValue(bool value) {
+        this.value = value;
     }
 }

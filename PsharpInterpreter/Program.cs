@@ -1,29 +1,42 @@
-using System.IO.Pipelines;
 
 public class Program {
 
 
     public static void Main(string[] files) {
-        Repl();
-        //Down there is a failed attempt at reading in a file screw it ill test with a repl
-        //if (files == ) throw new Exception("Empty input.\nUsage: psharp filename");
-        //StreamReader sr = new StreamReader(files[0]);
+        //Repl();
+        try {
+            string code = File.ReadAllText(files[0]);
+            ProgramNode program = Parser.ProduceAST(code);
+            Interpreter.Evaluate(program, new Environment(null));
+        }
+        catch (InternalError e) {
+            Console.WriteLine("PSERROR000: " + e.message);
+        }
+        catch (ExpectedSemicolonError e) {
+            Console.WriteLine("PSERROR001" + e.message + "on line: " + e.lineNo);
+        }
+        catch (Exception e) {
+            Console.WriteLine("PSERROR404: An unknown exception has occurred");
+            Console.WriteLine(e);
+        }
+        return;
     }
+    //  :D
 
     public static void Repl() {
-        Parser parser = new Parser();
-        Console.WriteLine("P# Parser testing repl");
+        Console.WriteLine("P# Testing repl");
         string input = "";
+        Environment env = new Environment(null);
         while (true) {
             Console.Write("$ ");
             input = Console.ReadLine()!;
             if (input == "exit" || input.Length == 0) {
-                Environment.Exit(0);
+                System.Environment.Exit(0);
             }
 
-            ProgramNode program = parser.ProduceAST(input);
-            var result = Interpreter.Evaluate(program);
-            Console.WriteLine(result.ToString());
+            ProgramNode program = Parser.ProduceAST(input);
+            Interpreter.Evaluate(program, env);
+            Console.WriteLine(program);
         }
     }
 
