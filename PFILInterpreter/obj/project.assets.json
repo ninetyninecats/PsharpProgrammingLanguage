@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/atticus/Documents/GitHub/PsharpProgrammingLanguage/PsharpInterpreter/PsharpProgrammingLanguage.csproj",
-      "projectName": "PsharpProgrammingLanguage",
-      "projectPath": "/home/atticus/Documents/GitHub/PsharpProgrammingLanguage/PsharpInterpreter/PsharpProgrammingLanguage.csproj",
+      "projectUniqueName": "/home/atticus/Documents/GitHub/PsharpProgrammingLanguage/PFILInterpreter/PFILInterpreter.csproj",
+      "projectName": "PFILInterpreter",
+      "projectPath": "/home/atticus/Documents/GitHub/PsharpProgrammingLanguage/PFILInterpreter/PFILInterpreter.csproj",
       "packagesPath": "/home/atticus/.nuget/packages/",
-      "outputPath": "/home/atticus/Documents/GitHub/PsharpProgrammingLanguage/PsharpInterpreter/obj/",
+      "outputPath": "/home/atticus/Documents/GitHub/PsharpProgrammingLanguage/PFILInterpreter/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/home/atticus/.nuget/NuGet/NuGet.Config"

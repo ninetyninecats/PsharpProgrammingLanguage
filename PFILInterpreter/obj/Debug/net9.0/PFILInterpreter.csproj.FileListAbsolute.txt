@@ -1,0 +1,15 @@
+/home/atticus/Documents/GitHub/PsharpProgrammingLanguage/PFILInterpreter/obj/Debug/net9.0/PFILInterpreter.GeneratedMSBuildEditorConfig.editorconfig
+/home/atticus/Documents/GitHub/PsharpProgrammingLanguage/PFILInterpreter/obj/Debug/net9.0/PFILInterpreter.AssemblyInfoInputs.cache
+/home/atticus/Documents/GitHub/PsharpProgrammingLanguage/PFILInterpreter/obj/Debug/net9.0/PFILInterpreter.AssemblyInfo.cs
+/home/atticus/Documents/GitHub/PsharpProgrammingLanguage/PFILInterpreter/obj/Debug/net9.0/PFILInterpreter.csproj.CoreCompileInputs.cache
+/home/atticus/Documents/GitHub/PsharpProgrammingLanguage/PFILInterpreter/obj/Debug/net9.0/PFILInterpreter.sourcelink.json
+/home/atticus/Documents/GitHub/PsharpProgrammingLanguage/PFILInterpreter/bin/Debug/net9.0/PFILInterpreter
+/home/atticus/Documents/GitHub/PsharpProgrammingLanguage/PFILInterpreter/bin/Debug/net9.0/PFILInterpreter.deps.json
+/home/atticus/Documents/GitHub/PsharpProgrammingLanguage/PFILInterpreter/bin/Debug/net9.0/PFILInterpreter.runtimeconfig.json
+/home/atticus/Documents/GitHub/PsharpProgrammingLanguage/PFILInterpreter/bin/Debug/net9.0/PFILInterpreter.dll
+/home/atticus/Documents/GitHub/PsharpProgrammingLanguage/PFILInterpreter/bin/Debug/net9.0/PFILInterpreter.pdb
+/home/atticus/Documents/GitHub/PsharpProgrammingLanguage/PFILInterpreter/obj/Debug/net9.0/PFILInterpreter.dll
+/home/atticus/Documents/GitHub/PsharpProgrammingLanguage/PFILInterpreter/obj/Debug/net9.0/refint/PFILInterpreter.dll
+/home/atticus/Documents/GitHub/PsharpProgrammingLanguage/PFILInterpreter/obj/Debug/net9.0/PFILInterpreter.pdb
+/home/atticus/Documents/GitHub/PsharpProgrammingLanguage/PFILInterpreter/obj/Debug/net9.0/PFILInterpreter.genruntimeconfig.cache
+/home/atticus/Documents/GitHub/PsharpProgrammingLanguage/PFILInterpreter/obj/Debug/net9.0/ref/PFILInterpreter.dll

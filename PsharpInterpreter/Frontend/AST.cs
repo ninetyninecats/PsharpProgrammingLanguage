@@ -16,7 +16,7 @@ public class TypeNode {
     public TypeNode(string type) { this.type = type; }
 }
 public class DeclNode : Node {}
-public interface LHS {}
+public class LHS : ExprNode {}
 public class FunDeclNode : DeclNode {
     public bool method;
     public string ident;
@@ -124,7 +124,7 @@ public class TernOpNode : ExprNode {
         this.elseValue = elseValue;
     }
 }
-public class IdentNode : ExprNode, LHS {
+public class IdentNode : LHS {
     public string name;
     public IdentNode(string name) { this.name = name; }
     public override string ToString() {

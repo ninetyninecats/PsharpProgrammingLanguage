@@ -1,0 +1,16 @@
+{
+    "cSpell.words": [
+        "bresult",
+        "binop",
+        "xors",
+        "PSERROR"
+    ],
+
+    "editor.formatOnSave": true,
+    "editor.formatOnType": true,
+    "editor.defaultFormatter": "seaube.clangformat",
+    "csharp.format.enable": true,
+    "[csharp]": {
+        "editor.formatOnType": false
+    },
+}
