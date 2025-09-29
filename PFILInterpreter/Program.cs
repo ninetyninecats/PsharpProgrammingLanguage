@@ -56,74 +56,65 @@
                     break;
                 case 0xE6:
                     {
-                        long a = stack.PopL();
-                        long b = stack.PopL();
+                        double a = stack.PopD();
+                        double b = stack.PopD();
                         stack.PushD(a - b);
                     }
                     break;
                 case 0xE7:
                     {
-                        long a = stack.PopL();
-                        long b = stack.PopL();
-                        stack.PushD(a - b);
+                        throw new Exception("Invalid bytecode");
                     }
-                    break;
                 case 0xE8:
                     {
-                        long a = stack.PopL();
-                        long b = stack.PopL();
-                        stack.PushD(a - b);
+                        ulong a = stack.PopUL();
+                        ulong b = stack.PopUL();
+                        stack.PushD(a * b);
                     }
                     break;
                 case 0xE9:
                     {
                         long a = stack.PopL();
                         long b = stack.PopL();
-                        stack.PushD(a - b);
+                        stack.PushD(a * b);
                     }
                     break;
                 case 0xEA:
                     {
-                        long a = stack.PopL();
-                        long b = stack.PopL();
-                        stack.PushD(a - b);
+                        double a = stack.PopD();
+                        double b = stack.PopD();
+                        stack.PushD(a * b);
                     }
                     break;
                 case 0xEB:
                     {
-                        long a = stack.PopL();
-                        long b = stack.PopL();
-                        stack.PushD(a - b);
+                        throw new Exception("Invalid bytecode");
                     }
-                    break;
                 case 0xEC:
                     {
-                        long a = stack.PopL();
-                        long b = stack.PopL();
-                        stack.PushD(a - b);
+                        ulong a = stack.PopUL();
+                        ulong b = stack.PopUL();
+                        stack.PushD(a / b);
                     }
                     break;
                 case 0xED:
                     {
                         long a = stack.PopL();
                         long b = stack.PopL();
-                        stack.PushD(a - b);
+                        stack.PushD(a / b);
                     }
                     break;
                 case 0xEE:
                     {
-                        long a = stack.PopL();
-                        long b = stack.PopL();
-                        stack.PushD(a - b);
+                        double a = stack.PopD();
+                        double b = stack.PopD();
+                        stack.PushD(a / b);
                     }
                     break;
                 case 0xEF:
                     {
-                        long a = stack.PopL();
-                        long b = stack.PopL();
-                        stack.PushD(a - b);
+                        throw new Exception("Invalid bytecode");
                     }
-                    break;
             }
         }        Console.WriteLine(stack.PopD());
 
